@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{4B1F1222-95D8-4C54-A674-2A1982325A20}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="eOdpad/Pages/MunicipalitySearchPage.xaml.cs">
+    <Files>
+      <File FileName="eOdpad/Pages/MunicipalitySearchPage.xaml" Line="20" Column="49" />
+      <File FileName="eOdpad/Pages/MunicipalitySearchPage.xaml.cs" Line="57" Column="1" />
+      <File FileName="eOdpad/Pages/CalendarPage.xaml.cs" Line="23" Column="10" />
+      <File FileName="eOdpad/Pages/CalendarPage.xaml" Line="20" Column="108" />
+      <File FileName="eOdpad/Objects/MunicipalityEntity.cs" Line="15" Column="9" />
+      <File FileName="eOdpad/Objects/WasteEntity.cs" Line="45" Column="20" />
+      <File FileName="eOdpad/App.xaml.cs" Line="16" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.eOdpad.Android PreferredExecutionTarget="Android.Android_Accelerated_x86" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MonoDevelop.Ide.ItemProperties.eOdpad.UITests FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.eOdpad.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3BD72033-F75F-42D2-B3EF-598053328A00" />
+</Properties>

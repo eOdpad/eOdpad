@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:eOdpad;assembly=eOdpad"
+             x:Class="eOdpad.Pages.CalendarPage"
+             Title="Kalendár">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:WasteTypeToColorConverter x:Key="WasteTypeConverter" />
+            <local:WasteTypeToTextConverter x:Key="WasteTypeToTextConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center"
+                               IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
+            <Label Text="Dáta sa načítavajú..." HorizontalOptions="Center" VerticalOptions="Center"
+                   IsVisible="False" IsEnabled="True" x:Name="syncLabel" />
+            <local:MyListView x:Name="wasteList" GroupDisplayBinding="{Binding Key}"
+                              IsPullToRefreshEnabled="true" IsGroupingEnabled="true" Refreshing="OnRefresh">
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="#e6e6e6">
+                        <Label Text="Toto je personalizovaný Kalendár pre oblasť: Komenského, Smolenice" />
+                    </StackLayout>
+                </ListView.Header>
+                <!-- Group Header Customization-->
+                <local:MyListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>  
+                            <StackLayout Orientation="Horizontal" HeightRequest="25" 
+                                         HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="#e6e6e6">
+                                <Label Text="{Binding Key, StringFormat='{0:dddd, dd.MM.yyyy}'}"
+                                       FontSize="Medium" VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </local:MyListView.GroupHeaderTemplate>
+                <!-- End Group Header Customization -->
+                <local:MyListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5" Orientation="Horizontal">
+                                <BoxView Color="{Binding WasteType, Converter={StaticResource WasteTypeConverter}}"
+                                         HorizontalOptions="StartAndExpand" HeightRequest="30" WidthRequest="30" />
+                                <Label Text="{Binding WasteType, Converter={StaticResource WasteTypeToTextConverter}}"
+                                       VerticalTextAlignment="Center" HorizontalOptions="End" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </local:MyListView.ItemTemplate>
+            </local:MyListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

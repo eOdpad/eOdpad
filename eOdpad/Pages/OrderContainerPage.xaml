@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="eOdpad.Pages.OrderContainerPage"
+             Title="Objednať kontajner">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Menu">
+               <TableRoot>
+                  <TableSection>
+                     <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="20,0,20,0">
+                           <StackLayout.GestureRecognizers>
+                               <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" NumberOfTapsRequired="1" />
+                           </StackLayout.GestureRecognizers>
+                           <Label Text="Zákazník" XAlign="Center"/>
+                           <Label Text=">" HorizontalOptions="EndAndExpand" XAlign="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                  </TableSection>
+                  <TableSection>
+                     <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="20,0,20,0">
+    <!--                       <StackLayout.GestureRecognizers>
+                               <TapGestureRecognizer Tapped="OnDeliveryAddressTapped" NumberOfTapsRequired="1" />
+                           </StackLayout.GestureRecognizers>-->
+                           <Label Text="Adresa" XAlign="Center"/>
+                           <Label Text=">" HorizontalOptions="EndAndExpand" XAlign="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                  </TableSection>
+                  <TableSection>
+                     <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="20,0,20,0">
+    <!--                       <StackLayout.GestureRecognizers>
+                               <TapGestureRecognizer Tapped="OnContainerTypeTapped" NumberOfTapsRequired="1" />
+                           </StackLayout.GestureRecognizers>-->
+                           <Label Text="Typ kontajnera" XAlign="Center"/>
+                           <Label Text=">" HorizontalOptions="EndAndExpand" XAlign="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                  </TableSection>
+                  <TableSection>
+                     <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="20,0,20,0">
+                        <StackLayout.GestureRecognizers>
+                               <TapGestureRecognizer Tapped="OnDeliveryDateTapped" NumberOfTapsRequired="1" />
+                           </StackLayout.GestureRecognizers>
+                           <Label x:Name="lblDateDelivery" Text="Dátum dodania" XAlign="Center"/>
+                           <Label Text=">" HorizontalOptions="EndAndExpand" XAlign="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="20,0,20,0">
+                        <StackLayout.GestureRecognizers>
+                               <TapGestureRecognizer Tapped="OnPickUpDateTapped" NumberOfTapsRequired="1" />
+                           </StackLayout.GestureRecognizers>
+                           <Label x:Name="lblDatePickUp" Text="Dátum vyzdvihnutia" XAlign="Center"/>
+                           <Label Text=">" HorizontalOptions="EndAndExpand" XAlign="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                  </TableSection>
+                  <TableSection>
+                     <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="20,0,20,0">
+    <!--                       <StackLayout.GestureRecognizers>
+                               <TapGestureRecognizer Tapped="OnContainerTypeTapped" NumberOfTapsRequired="1" />
+                           </StackLayout.GestureRecognizers>-->
+                           <Label Text="Miesto dodania" XAlign="Center"/>
+                           <Label Text=">" HorizontalOptions="EndAndExpand" XAlign="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                  </TableSection>
+                  <TableSection>
+                     <ViewCell>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="20,0,20,0" BackgroundColor="Lime" Opacity="0.5">
+                           <Button Text="Objednať" HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" TextColor="White"  />
+                        </StackLayout>
+                    </ViewCell>
+                  </TableSection>
+               </TableRoot> 
+            </TableView>
+            <DatePicker x:Name="datePickerDelivery" DateSelected="HandleDelivery_DateSelected" VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}" IsVisible="false">
+             <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+             <DatePicker.MinimumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                   <x:Arguments>
+                      <x:String>Jan 1 2016</x:String>
+                   </x:Arguments>
+                </sys:DateTime>
+             </DatePicker.MinimumDate>
+             <DatePicker.MaximumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                   <x:Arguments>
+                      <x:String>Dec 31 2030</x:String>
+                   </x:Arguments>
+                </sys:DateTime>
+             </DatePicker.MaximumDate>
+          </DatePicker>
+          <DatePicker x:Name="datePickerPickUp" DateSelected="HandlePickUp_DateSelected" VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}" IsVisible="false">
+             <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+             <DatePicker.MinimumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                   <x:Arguments>
+                      <x:String>Jan 1 2016</x:String>
+                   </x:Arguments>
+                </sys:DateTime>
+             </DatePicker.MinimumDate>
+             <DatePicker.MaximumDate>
+                <sys:DateTime x:FactoryMethod="Parse">
+                   <x:Arguments>
+                      <x:String>Dec 31 2030</x:String>
+                   </x:Arguments>
+                </sys:DateTime>
+             </DatePicker.MaximumDate>
+          </DatePicker>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

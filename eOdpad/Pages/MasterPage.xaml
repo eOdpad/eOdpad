@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:eOdpad;assembly=eOdpad"
+             x:Class="eOdpad.Pages.MasterPage"
+             Padding="0,40,0,0"
+             Title="eOdpad"
+             BackgroundColor="Gray"
+             Icon="menu_white.png">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <local:MyListView x:Name="listView" ItemsSource="{Binding MenuItemsGrouped}" BackgroundColor="Gray" IsGroupingEnabled="true" GroupDisplayBinding="{Binding Key}" SeparatorColor="White" VerticalOptions="FillAndExpand">
+                <local:MyListView.GroupHeaderTemplate>
+                  <DataTemplate>
+                    <ViewCell Height="25">
+                      <StackLayout Orientation="Horizontal" Padding="10,0,0,0" BackgroundColor="Gray" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding Key}" TextColor="White" FontSize="Small" FontAttributes="Bold" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+                        <!--<BoxView HeightRequest="0.5" BackgroundColor="White" />-->
+                      </StackLayout>
+                    </ViewCell>
+                  </DataTemplate>
+                </local:MyListView.GroupHeaderTemplate>
+                <local:MyListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Title}" TextColor="White" ImageSource="{Binding IconSource}" />
+                    </DataTemplate>
+                </local:MyListView.ItemTemplate>
+            </local:MyListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eOdpad.Pages.FeedbackCompanyPage"
+             Title="Dotazník">
+   <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <TableView Intent="Form">
+                    <TableRoot>
+                        <TableSection Title="Osobné údaje">
+                            <EntryCell Label="Meno" Keyboard="Text" />
+                            <EntryCell Label="Priezvisko" Keyboard="Text" />
+                            <EntryCell Label="Funkcia" Keyboard="Text" />
+                            <EntryCell Label="Firma/Organizácia" Keyboard="Text" />
+                        </TableSection>
+                        <TableSection Title="Ako ste spokojný s kvalitou dodávaných služieb?">
+                            <ViewCell>
+                                <Picker>
+                                    <Picker.Items>
+                                        <x:String>veľmi spokojný</x:String>
+                                        <x:String>skôr spokojný</x:String>
+                                        <x:String>ani spokojný, ani nespokojný</x:String>
+                                        <x:String>veľmi nespokojný</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection Title="Boli ste spokojný s prístupom, úrovňou a ochotou pracovníkov pri vybavovaní Vašich požiadaviek?">
+                            <ViewCell>
+                                <Picker>
+                                    <Picker.Items>
+                                        <x:String>veľmi spokojný</x:String>
+                                        <x:String>skôr spokojný</x:String>
+                                        <x:String>ani spokojný, ani nespokojný</x:String>
+                                        <x:String>veľmi nespokojný</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection Title="Boli ste spokojný s plnením dohodnutých termínov?">
+                            <ViewCell>
+                                <Picker>
+                                    <Picker.Items>
+                                        <x:String>veľmi spokojný</x:String>
+                                        <x:String>skôr spokojný</x:String>
+                                        <x:String>ani spokojný, ani nespokojný</x:String>
+                                        <x:String>veľmi nespokojný</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection Title="Boli ste spokojný s úrovňou komunikácie?">
+                            <ViewCell>
+                                <Picker>
+                                    <Picker.Items>
+                                        <x:String>veľmi spokojný</x:String>
+                                        <x:String>skôr spokojný</x:String>
+                                        <x:String>ani spokojný, ani nespokojný</x:String>
+                                        <x:String>veľmi nespokojný</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection Title="Ako ste boli spokojný s pružnosťou pri odstraňovaní nedostatkov?">
+                            <ViewCell>
+                                <Picker>
+                                    <Picker.Items>
+                                        <x:String>veľmi spokojný</x:String>
+                                        <x:String>skôr spokojný</x:String>
+                                        <x:String>ani spokojný, ani nespokojný</x:String>
+                                        <x:String>veľmi nespokojný</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection Title="Aké produkty a služby Vám v našej ponuke chýbajú?">
+                            <ViewCell>
+                                <Editor Keyboard="Text" BackgroundColor="White" HeightRequest="150" MinimumHeightRequest="150" />
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection Title="Čo by ste nám odporučili zlepšiť, zmeniť?">
+                            <ViewCell>
+                                <Editor Keyboard="Text" BackgroundColor="White" HeightRequest="150" MinimumHeightRequest="150" />
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="20,0,20,0" BackgroundColor="Lime" Opacity="0.5">
+                                    <Button Text="Odoslať dotazník" Clicked="Handle_Clicked" HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold" TextColor="White" />
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

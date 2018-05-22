@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eOdpad.Pages.TrashTypePage"
+             Title="Typy odpadov">
+    <ContentPage.Content>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Prosím zvoľte si, ktoré typy odpadu sú pre Vás dôležité.">
+                    <SwitchCell Text="Biologický" On="true" />
+                    <SwitchCell Text="Komunálny" On="true" />
+                    <SwitchCell Text="Plasty" On="true" />
+                    <SwitchCell Text="Papier" On="true" />
+                </TableSection>
+                <TableSection Title="Prosím zvoľte si, ktoré ďaľšie termíny sú pre Vás dôležité.">
+                    <SwitchCell Text="Zberný dvor" On="true" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>
