@@ -1,22 +1,24 @@
 ﻿<Properties StartupConfiguration="{4B1F1222-95D8-4C54-A674-2A1982325A20}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="eOdpad/Pages/MunicipalitySearchPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="eOdpad/Pages/MunicipalitySearchPage.xaml">
     <Files>
-      <File FileName="eOdpad/Pages/MunicipalitySearchPage.xaml" Line="20" Column="49" />
-      <File FileName="eOdpad/Pages/MunicipalitySearchPage.xaml.cs" Line="57" Column="1" />
-      <File FileName="eOdpad/Pages/CalendarPage.xaml.cs" Line="23" Column="10" />
-      <File FileName="eOdpad/Pages/CalendarPage.xaml" Line="20" Column="108" />
-      <File FileName="eOdpad/Objects/MunicipalityEntity.cs" Line="15" Column="9" />
-      <File FileName="eOdpad/Objects/WasteEntity.cs" Line="45" Column="20" />
-      <File FileName="eOdpad/App.xaml.cs" Line="16" Column="13" />
+      <File FileName="eOdpad/Pages/ReminderPage.xaml" Line="47" Column="38" />
+      <File FileName="eOdpad/Pages/TrashTypePage.xaml" Line="16" Column="33" />
+      <File FileName="eOdpad/Pages/FeedbackPage.xaml.cs" Line="5" Column="52" />
+      <File FileName="eOdpad/Pages/FeedbackPage.xaml" Line="10" Column="21" />
+      <File FileName="eOdpad/Pages/MasterPage.xaml.cs" Line="12" Column="53" />
+      <File FileName="eOdpad/ViewModels/MasterPageViewModel.cs" Line="66" Column="31" />
+      <File FileName="eOdpad/Pages/MunicipalitySearchPage.xaml" Line="11" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad/Pages/MunicipalitySearchPage.xaml.cs" relfile="eOdpad/Pages/MunicipalitySearchPage.xaml.cs" line="67" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.eOdpad.Android PreferredExecutionTarget="Android.Android_Accelerated_x86" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
   <MonoDevelop.Ide.ItemProperties.eOdpad.UITests FirstBuild="True" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.eOdpad.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3BD72033-F75F-42D2-B3EF-598053328A00" />
+  <MonoDevelop.Ide.ItemProperties.eOdpad.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FE7F3170-AF10-46D8-88AF-FD1A6935EB4C" />
 </Properties>

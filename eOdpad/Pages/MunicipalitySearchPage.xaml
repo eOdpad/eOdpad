@@ -4,20 +4,21 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              xmlns:local="clr-namespace:eOdpad;assembly=eOdpad"
              x:Class="eOdpad.Pages.MunicipalitySearchPage"
-             ios:Page.UseSafeArea="true">
+             ios:Page.UseSafeArea="true"
+             Title="Bydlisko">
     <ContentPage.Content>
         <StackLayout>
             <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center"
                                IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
             <Label Text="Dáta sa načítavajú..." HorizontalOptions="Center" VerticalOptions="Center"
                    IsVisible="False" IsEnabled="True" x:Name="syncLabel" />
-            <SearchBar Placeholder="Názov obce" TextChanged="Handle_TextChanged" />
+            <SearchBar Placeholder="Hľadať" TextChanged="Handle_TextChanged" />
             <Label x:Name="lblListEmpty" HorizontalOptions="CenterAndExpand" Text="Žiadne dáta k dispozícii" IsVisible="false" />
             <local:MyListView x:Name="municipalityList" 
                               IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
                    <ListView.Header>
                         <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="#e6e6e6">
-                            <Label Text="Prosím vyberte si svoju obec:" />
+                            <Label Text="Prosím vyberte si svoje mesto alebo obec:" />
                         </StackLayout>
                     </ListView.Header>
                     <local:MyListView.ItemTemplate>

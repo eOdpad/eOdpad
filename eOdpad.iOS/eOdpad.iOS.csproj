@@ -195,5 +195,8 @@
     <BundleResource Include="Resources\trash_white_2x.png" />
     <BundleResource Include="Resources\trash_white_3x.png" />
     <BundleResource Include="Resources\trash_white.png" />
+    <BundleResource Include="Resources\feedback_white_2x.png" />
+    <BundleResource Include="Resources\feedback_white_3x.png" />
+    <BundleResource Include="Resources\feedback_white.png" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eOdpad.Pages.FeedbackPage"
+             Title="Feedback">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Odoslať" Command="{Binding ToolbarItemCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <TableView Intent="Form" HasUnevenRows="true">
+                <TableRoot>
+                    <TableSection Title="Toto je miesto kde môžete spísať svoje podnety a sťažnosti. Vaša žiadosť bude spoľahlivo preposlaná daľej." />
+                    <TableSection Title="Predmet">
+                        <ViewCell>
+                            <Picker Title="Vyberte predmet" HeightRequest="40">
+                                <Picker.Items>
+                                    <x:String>Nevynesený odpad</x:String>
+                                    <x:String>Závada na kontajneri</x:String>
+                                    <x:String>Zanedbaná ulica</x:String>
+                                    <x:String>Čierna skládka</x:String>
+                                    <x:String>Iný dôvod</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="Kontaktné údaje">
+                        <EntryCell Label="Meno" Placeholder="Povinné" Keyboard="Text" />
+                        <EntryCell Label="Ulica" Keyboard="Text" />
+                        <EntryCell Label="Telefón" Placeholder="Povinné" Keyboard="Telephone" />
+                        <EntryCell Label="E-Mail" Placeholder="Povinné" Keyboard="Email" />
+                    </TableSection>
+                    <TableSection Title="Správa a prílohy">
+                        <ViewCell>
+                            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Editor Keyboard="Text" BackgroundColor="White" HeightRequest="150" MinimumHeightRequest="150" />
+   <!--                             <Grid Padding="20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Frame Grid.Row="0" Grid.Column="0" WidthRequest="50" HeightRequest="50" BackgroundColor="Gray" />
+                                    <Frame Grid.Row="0" Grid.Column="1" WidthRequest="50" HeightRequest="50" BackgroundColor="Gray" />
+                                </Grid>-->
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                     <TableSection>
+                        <ViewCell>
+                            <StackLayout>
+                                <Button Text="Odoslať Feedback" FontAttributes="Bold" TextColor="Green" FontSize="Medium" />        
+                            </StackLayout>         
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

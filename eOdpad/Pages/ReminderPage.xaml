@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="eOdpad.Pages.ReminderPage"
              Title="Pripomienky">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Reminder data goes here" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Budík Vám pomáha pripomenúť kedy máte daný odpad vyhodiť. Pre nastavenie budíka prosíme o zodpovedanie 2 nižšie položených otázok." />
+                    <TableSection Title="1. Kedy Vám máme pripomenúť?">
+                        <ViewCell>
+                            <Picker Title="Deň pripomenutia" FontSize="Medium" FontAttributes="Bold"
+                                        TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"> 
+                                <Picker.Items>
+                                    <x:String>deň predtým</x:String>
+                                    <x:String>v ten deň</x:String>
+                              </Picker.Items>
+                            </Picker>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <TimePicker Time="{Binding Source={x:Static sys:DateTime.Now}}" Format="HH:mm" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" /> 
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="2. Ktoré typy odpadov by sme Vám mali pripomenúť?">
+                        <SwitchCell Text="Biologický" On="true" />
+                        <SwitchCell Text="Komunálny" On="true" />
+                        <SwitchCell Text="Plasty" On="true" />
+                        <SwitchCell Text="Papier" On="true" />
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <StackLayout>
+                                <Button Text="Budík uložiť" FontAttributes="Bold" TextColor="Green" FontSize="Medium" />        
+                            </StackLayout>         
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="Chcete budík ihned otestovat? Kliknite tu a v nasledujúcich 10 minútach odošleme jednu testovaciu pripomienku">
+                        <ViewCell>
+                            <StackLayout>
+                                <Button Text="Otestovať Budík" FontAttributes="Bold" TextColor="Green" FontSize="Medium" />        
+                            </StackLayout>         
+                        </ViewCell>
+                    </TableSection>   
+                </TableRoot>
+            </TableView>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

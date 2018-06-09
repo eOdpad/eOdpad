@@ -7,6 +7,10 @@ namespace eOdpad
 {
     public class MasterPageViewModel
     {
+        const string MyWasteSectionName = "Môj odpad";
+        const string MySettingsSectionName = "Nastavenia";
+        const string MyApplicationSectionName = "Aplikácia";
+
         public ObservableCollection<MasterPageItem> MenuItems { get; set; }
         public ObservableCollection<Grouping<string, MasterPageItem>> MenuItemsGrouped { get; set; }
 
@@ -28,7 +32,7 @@ namespace eOdpad
             MenuItems.Add(new MasterPageItem
             {
                 Section = "1",
-                SectionName = "Môj odpad",
+                SectionName = MyWasteSectionName,
                 Title = "Prehľad",
                 IconSource = "home_white.png",
                 TargetType = typeof(OverviewPage)
@@ -36,7 +40,7 @@ namespace eOdpad
             MenuItems.Add(new MasterPageItem
             {
                 Section = "1",
-                SectionName = "Môj odpad",
+                SectionName = MyWasteSectionName,
                 Title = "Kalendár",
                 IconSource = "date_range_white.png",
                 TargetType = typeof(CalendarPage)
@@ -44,7 +48,7 @@ namespace eOdpad
             MenuItems.Add(new MasterPageItem
             {
                 Section = "1",
-                SectionName = "Môj odpad",
+                SectionName = MyWasteSectionName,
                 Title = "Zberný dvor",
                 IconSource = "date_range_white.png",
                 TargetType = typeof(GarbageYardTabbPage)
@@ -52,7 +56,7 @@ namespace eOdpad
             MenuItems.Add(new MasterPageItem
             {
                 Section = "1",
-                SectionName = "Môj odpad",
+                SectionName = MyWasteSectionName,
                 Title = "Budík",
                 IconSource = "alarm_white.png",
                 TargetType = typeof(ReminderPage)
@@ -60,7 +64,7 @@ namespace eOdpad
             MenuItems.Add(new MasterPageItem
             {
                 Section = "1",
-                SectionName = "Môj odpad",
+                SectionName = MyWasteSectionName,
                 Title = "Objednať Kontajner",
                 IconSource = "local_shipping_white.png",
                 TargetType = typeof(OrderContainerPage)
@@ -68,31 +72,31 @@ namespace eOdpad
             MenuItems.Add(new MasterPageItem
             {
                 Section = "1",
-                SectionName = "Môj odpad",
-                Title = "Čierna skládka",
-                IconSource = "local_shipping_white.png",
-                TargetType = typeof(RandomDumpPage)
+                SectionName = MyWasteSectionName,
+                Title = "Feedback",
+                IconSource = "feedback_white.png",
+                TargetType = typeof(FeedbackPage)
             });
             MenuItems.Add(new MasterPageItem
             {
                 Section = "2",
-                SectionName = "Nastavenia",
-                Title = "Zmenit oblast",
+                SectionName = MySettingsSectionName,
+                Title = "Zmeniť oblast",
                 IconSource = "edit_location_white.png",
-                TargetType = typeof(ReminderPage)
+                TargetType = typeof(MunicipalitySearchPage)
             });
             MenuItems.Add(new MasterPageItem
             {
                 Section = "2",
-                SectionName = "Nastavenia",
-                Title = "Zmenit Odpad",
+                SectionName = MySettingsSectionName,
+                Title = "Zmeniť Odpad",
                 IconSource = "trash_white.png",
                 TargetType = typeof(TrashTypePage)
             });
             MenuItems.Add(new MasterPageItem
             {
                 Section = "3",
-                SectionName = "Aplikácia",
+                SectionName = MyApplicationSectionName,
                 Title = "O Aplikácii",
                 IconSource = "info_outline_white.png",
                 TargetType = typeof(AboutPage)
@@ -100,7 +104,7 @@ namespace eOdpad
             MenuItems.Add(new MasterPageItem
             {
                 Section = "3",
-                SectionName = "Aplikácia",
+                SectionName = MyApplicationSectionName,
                 Title = "Informuj Priateľov",
                 IconSource = "share_white.png",
                 TargetType = typeof(SharePage)
