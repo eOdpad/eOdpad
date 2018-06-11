@@ -13,9 +13,12 @@
             <Label Text="Dáta sa načítavajú..." HorizontalOptions="Center" VerticalOptions="Center"
                    IsVisible="False" IsEnabled="True" x:Name="syncLabel" />
             <SearchBar Placeholder="Hľadať" TextChanged="Handle_TextChanged" />
-            <Label x:Name="lblListEmpty" HorizontalOptions="CenterAndExpand" Text="Žiadne dáta k dispozícii" IsVisible="false" />
+            <Label x:Name="lblListEmpty" HorizontalOptions="CenterAndExpand"
+                   Text="Žiadne dáta k dispozícii" IsVisible="false" />
             <local:MyListView x:Name="municipalityList" 
-                              IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
+                              IsPullToRefreshEnabled="true"
+                              ItemSelected="Municipality_Selected"
+                              Refreshing="OnRefresh">
                    <ListView.Header>
                         <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="#e6e6e6">
                             <Label Text="Prosím vyberte si svoje mesto alebo obec:" />

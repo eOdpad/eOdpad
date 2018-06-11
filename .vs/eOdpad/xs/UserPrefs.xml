@@ -1,24 +1,12 @@
 ﻿<Properties StartupConfiguration="{4B1F1222-95D8-4C54-A674-2A1982325A20}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="eOdpad/Pages/MunicipalitySearchPage.xaml">
-    <Files>
-      <File FileName="eOdpad/Pages/ReminderPage.xaml" Line="47" Column="38" />
-      <File FileName="eOdpad/Pages/TrashTypePage.xaml" Line="16" Column="33" />
-      <File FileName="eOdpad/Pages/FeedbackPage.xaml.cs" Line="5" Column="52" />
-      <File FileName="eOdpad/Pages/FeedbackPage.xaml" Line="10" Column="21" />
-      <File FileName="eOdpad/Pages/MasterPage.xaml.cs" Line="12" Column="53" />
-      <File FileName="eOdpad/ViewModels/MasterPageViewModel.cs" Line="66" Column="31" />
-      <File FileName="eOdpad/Pages/MunicipalitySearchPage.xaml" Line="11" Column="39" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad/Pages/MunicipalitySearchPage.xaml.cs" relfile="eOdpad/Pages/MunicipalitySearchPage.xaml.cs" line="67" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.eOdpad.Android PreferredExecutionTarget="Android.Android_Accelerated_x86" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
   <MonoDevelop.Ide.ItemProperties.eOdpad.UITests FirstBuild="True" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.eOdpad.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FE7F3170-AF10-46D8-88AF-FD1A6935EB4C" />
+  <MonoDevelop.Ide.ItemProperties.eOdpad.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.e7f7f47642b27e66798867c9a8ce2a129e4f8408" />
 </Properties>

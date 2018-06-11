@@ -81,7 +81,7 @@ namespace eOdpad
             {
                 Section = "2",
                 SectionName = MySettingsSectionName,
-                Title = "Zmeniť oblast",
+                Title = "Zmeniť oblasť",
                 IconSource = "edit_location_white.png",
                 TargetType = typeof(MunicipalitySearchPage)
             });

@@ -15,6 +15,12 @@ namespace eOdpad
             InitializeComponent();
 
             MainPage = new MainPage();
+
+            //new NavigationPage(new IntroPage())
+            //{
+            //    BarBackgroundColor = Color.FromHex("#4CD964"),
+            //    BarTextColor = Color.White
+            //};
         }
 
         protected override void OnStart()

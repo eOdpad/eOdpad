@@ -89,5 +89,16 @@ namespace eOdpad.Pages
                 lblListEmpty.IsVisible = true;
             }
         }
+
+        async void Municipality_Selected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+                return;
+
+            var municipality = e.SelectedItem as MunicipalityEntity;
+            await Navigation.PushAsync(new StreetSearchPage(municipality.Code));
+
+            ((ListView)sender).SelectedItem = null;
+        }
     }
 }

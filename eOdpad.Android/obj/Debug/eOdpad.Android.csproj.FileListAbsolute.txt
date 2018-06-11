@@ -28,9 +28,6 @@
 /Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Android/obj/Debug/R.cs.flag
 /Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Android/obj/Debug/R.txt
 /Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Android/obj/Debug/uploadflags.txt
-/Users/michalhoblik/.nuget/packages/xamarin.forms/3.0.0.446417/lib/MonoAndroid10/FormsViewGroup.dll
-/Users/michalhoblik/.nuget/packages/plugin.share/7.1.1/lib/MonoAndroid10/Plugin.Share.dll
-/Users/michalhoblik/.nuget/packages/xamarin.forms/3.0.0.446417/lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll
 /Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Android/bin/Debug/Mono.Android.pdb
 /Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Android/bin/Debug/Plugin.Share.Abstractions.pdb
 /Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Android/bin/Debug/Xamarin.Forms.Core.pdb

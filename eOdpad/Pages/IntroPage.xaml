@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eOdpad.Pages.IntroPage"
+             Title="Štart">
+        <ContentPage.Content>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Úvodné nastavenie" FontSize="Large"
+                           FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                    <Label Text="Pri prvom štarte musíme na základe Vašich požiadaviek nastaviť aplikáciu."
+                           HorizontalTextAlignment="Center" />
+                    <Button Text="Začnime" Margin="50,10,50,0" BackgroundColor="#4CD964" 
+                            TextColor="White" Clicked="Handle_Clicked" />
+                </StackLayout>
+        </ContentPage.Content>
+</ContentPage>
