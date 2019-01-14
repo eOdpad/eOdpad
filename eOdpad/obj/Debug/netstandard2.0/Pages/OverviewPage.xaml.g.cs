@@ -16,9 +16,13 @@ namespace eOdpad.Pages {
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages/OverviewPage.xaml")]
     public partial class OverviewPage : global::Xamarin.Forms.ContentPage {
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::eOdpad.ViewModels.OverviewPageViewModel viewModel;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(OverviewPage));
+            viewModel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::eOdpad.ViewModels.OverviewPageViewModel>(this, "viewModel");
         }
     }
 }

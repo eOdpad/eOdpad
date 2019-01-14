@@ -1,0 +1,8 @@
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Abstractions/bin/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.deps.json
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Abstractions/bin/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Abstractions/bin/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Abstractions/obj/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.csprojAssemblyReference.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Abstractions/obj/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.csproj.CoreCompileInputs.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Abstractions/obj/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.AssemblyInfoInputs.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Abstractions/obj/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Abstractions/obj/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.pdb

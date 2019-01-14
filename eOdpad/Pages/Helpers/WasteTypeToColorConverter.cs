@@ -8,37 +8,35 @@ namespace eOdpad
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is int type)
+            if (value is string type)
             {
-                if (type.Equals(1))
+                switch (value)
                 {
-                    return Color.Black;
+                    case "Kovy":
+                        return Color.Red;
+                    case "Sklo":
+                    case "Sklo (kontajner)":
+                        return Color.Green;
+                    case "Plasty":
+                    case "Plasty (kontajner)":
+                        return Color.Yellow;
+                    case "Papier":
+                    case "Papier (kontajner)":
+                        return Color.Blue;
+                    case "Bioodpad":
+                        return Color.Brown;
+                    case "Komunálny odpad":
+                        return Color.Black;
+                    case "Tetrapak":
+                        return Color.Orange;
+                    default:
+                        return Color.White;
                 }
-
-                if (type.Equals(2))
-                {
-                    return Color.Yellow;
-                }
-
-                if (type.Equals(3))
-                {
-                    return Color.Blue;
-                }
-
-                if (type.Equals(4))
-                {
-                    return Color.Brown;
-                }
-
-                return Color.White;
             }
 
             return Color.White;
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotImplementedException();
-        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => throw new NotImplementedException();
     }
 }

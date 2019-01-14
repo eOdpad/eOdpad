@@ -38,10 +38,11 @@
                             </StackLayout>         
                         </ViewCell>
                     </TableSection>
-                    <TableSection Title="Chcete budík ihned otestovat? Kliknite tu a v nasledujúcich 10 minútach odošleme jednu testovaciu pripomienku">
+                    <TableSection Title="Chcete budík ihned otestovat? Kliknite tu a v nasledujúcich 5 minútach odošleme jednu testovaciu pripomienku">
                         <ViewCell>
                             <StackLayout>
-                                <Button Text="Otestovať Budík" FontAttributes="Bold" TextColor="Green" FontSize="Medium" />        
+                                <Button x:Name="btnTest" Text="Otestovať Budík"
+                                        FontAttributes="Bold" TextColor="Green" FontSize="Medium" />        
                             </StackLayout>         
                         </ViewCell>
                     </TableSection>   

@@ -1,0 +1,85 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Humanizer" Version="2.5.16" />
+    <PackageReference Include="Microsoft.Azure.Mobile.Client" Version="4.1.1" />
+    <PackageReference Include="Microsoft.Azure.Mobile.Client.SQLiteStore" Version="4.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.3.0" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="1.1.12" />
+    <PackageReference Include="SQLitePCLRaw.core" Version="1.1.12" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="eOdpad.DataObjects\BaseDataObject.cs" />
+    <Compile Remove="eOdpad.DataObjects\CalendarEvent.cs" />
+    <Compile Remove="eOdpad.DataObjects\Company.cs" />
+    <Compile Remove="eOdpad.DataObjects\GarbageYard.cs" />
+    <Compile Remove="eOdpad.DataObjects\IBaseDataObject.cs" />
+    <Compile Remove="eOdpad.DataObjects\Municipality.cs" />
+    <Compile Remove="eOdpad.DataObjects\Street.cs" />
+    <Compile Remove="eOdpad.DataStore.Abstractions\IBaseStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Abstractions\ICalendarEventStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Abstractions\ICompanyStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Abstractions\IGarbageYardStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Abstractions\IMunicipalityStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Abstractions\IStoreManager.cs" />
+    <Compile Remove="eOdpad.DataStore.Abstractions\IStreetStore.cs" />
+    <Compile Remove="eOdpad.Client.DataObjects\Class1.cs" />
+    <Compile Remove="eOdpad.Client.DataObjects\BaseDataObject.cs" />
+    <Compile Remove="eOdpad.Client.DataObjects\CalendarEvent.cs" />
+    <Compile Remove="eOdpad.Client.DataObjects\Company.cs" />
+    <Compile Remove="eOdpad.Client.DataObjects\GarbageYard.cs" />
+    <Compile Remove="eOdpad.Client.DataObjects\IBaseDataObject.cs" />
+    <Compile Remove="eOdpad.Client.DataObjects\Municipality.cs" />
+    <Compile Remove="eOdpad.Client.DataObjects\Street.cs" />
+    <Compile Remove="eOdpad.Client.DataObjects\Azure\PaginatedResult.cs" />
+    <Compile Remove="eOdpad.DataStore.Mock\StoreManager.cs" />
+    <Compile Remove="eOdpad.DataStore.Mock\Stores\BaseStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Mock\Stores\CalendarEventStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Mock\Stores\CompanyStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Mock\Stores\GarbageYardStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Mock\Stores\MunicipalityStore.cs" />
+    <Compile Remove="eOdpad.DataStore.Mock\Stores\StreetStore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Stores\" />
+    <Folder Include="eOdpad.Client.DataObjects\Azure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="eOdpad.DataObjects\eOdpad.DataObjects.projitems" />
+    <None Remove="eOdpad.DataStore.Abstractions\obj\eOdpad.DataStore.Abstractions.csproj.nuget.cache" />
+    <None Remove="eOdpad.DataStore.Abstractions\obj\eOdpad.DataStore.Abstractions.csproj.nuget.g.props" />
+    <None Remove="eOdpad.DataStore.Abstractions\obj\eOdpad.DataStore.Abstractions.csproj.nuget.g.targets" />
+    <None Remove="eOdpad.DataStore.Abstractions\obj\project.assets.json" />
+    <None Remove="eOdpad.DataStore.Abstractions\obj\Debug\netstandard2.0\eOdpad.DataStore.Abstractions.assets.cache" />
+    <None Remove="eOdpad.DataStore.Abstractions\obj\Debug\netstandard2.0\eOdpad.DataStore.Abstractions.csprojAssemblyReference.cache" />
+    <None Remove="eOdpad.DataStore.Abstractions\bin\Debug\netstandard2.0\eOdpad.DataStore.Abstractions.deps.json" />
+    <None Remove="eOdpad.DataStore.Abstractions\bin\Debug\netstandard2.0\eOdpad.DataStore.Abstractions.dll" />
+    <None Remove="eOdpad.Client.DataObjects\obj\eOdpad.Client.DataObjects.csproj.nuget.cache" />
+    <None Remove="eOdpad.Client.DataObjects\bin\Debug\netstandard2.0\eOdpad.Client.DataObjects.pdb" />
+    <None Remove="eOdpad.Client.DataObjects\obj\Debug\netstandard2.0\eOdpad.Client.DataObjects.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eOdpad.Utils\eOdpad.Utils.csproj" />
+    <ProjectReference Include="eOdpad.Client.DataObjects\eOdpad.Client.DataObjects.csproj" />
+    <ProjectReference Include="eOdpad.DataStore.Abstractions\eOdpad.DataStore.Abstractions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="eOdpad.Client.DataObjects\Azure\PaginatedResult.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="eOdpad.DataStore.Mock\StoreManager.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="eOdpad.DataStore.Mock\Stores\BaseStore.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="eOdpad.DataStore.Mock\Stores\CalendarEventStore.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="eOdpad.DataStore.Mock\Stores\CompanyStore.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="eOdpad.DataStore.Mock\Stores\GarbageYardStore.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="eOdpad.DataStore.Mock\Stores\MunicipalityStore.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="eOdpad.DataStore.Mock\Stores\StreetStore.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+  </ItemGroup>
+</Project>

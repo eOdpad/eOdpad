@@ -1,0 +1,9 @@
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.Client.DataObjects/bin/Debug/netstandard2.0/eOdpad.Client.DataObjects.deps.json
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.Client.DataObjects/bin/Debug/netstandard2.0/eOdpad.Client.DataObjects.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.Client.DataObjects/bin/Debug/netstandard2.0/eOdpad.Client.DataObjects.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.Client.DataObjects/obj/Debug/netstandard2.0/eOdpad.Client.DataObjects.csprojAssemblyReference.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.Client.DataObjects/obj/Debug/netstandard2.0/eOdpad.Client.DataObjects.csproj.CoreCompileInputs.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.Client.DataObjects/obj/Debug/netstandard2.0/eOdpad.Client.DataObjects.AssemblyInfoInputs.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.Client.DataObjects/obj/Debug/netstandard2.0/eOdpad.Client.DataObjects.AssemblyInfo.cs
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.Client.DataObjects/obj/Debug/netstandard2.0/eOdpad.Client.DataObjects.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.Client.DataObjects/obj/Debug/netstandard2.0/eOdpad.Client.DataObjects.pdb

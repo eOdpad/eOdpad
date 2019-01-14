@@ -8,5 +8,11 @@ namespace eOdpad.Pages
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            viewModel.LoadDataCommand.Execute(null);
+            base.OnAppearing();
+        }
     }
 }

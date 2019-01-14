@@ -1,0 +1,15 @@
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/bin/Debug/netstandard2.0/eOdpad.DataStore.Azure.deps.json
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/bin/Debug/netstandard2.0/eOdpad.DataStore.Azure.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/bin/Debug/netstandard2.0/eOdpad.DataStore.Azure.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/bin/Debug/netstandard2.0/eOdpad.Client.DataObjects.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/bin/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/bin/Debug/netstandard2.0/eOdpad.Utils.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/bin/Debug/netstandard2.0/eOdpad.Utils.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/bin/Debug/netstandard2.0/eOdpad.Client.DataObjects.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/bin/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/obj/Debug/netstandard2.0/eOdpad.DataStore.Azure.csprojAssemblyReference.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/obj/Debug/netstandard2.0/eOdpad.DataStore.Azure.csproj.CoreCompileInputs.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/obj/Debug/netstandard2.0/eOdpad.DataStore.Azure.csproj.CopyComplete
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/obj/Debug/netstandard2.0/eOdpad.DataStore.Azure.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/obj/Debug/netstandard2.0/eOdpad.DataStore.Azure.pdb

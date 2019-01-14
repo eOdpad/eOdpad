@@ -1,0 +1,10 @@
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/bin/Debug/netstandard2.0/eOdpad.Utils.deps.json
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/bin/Debug/netstandard2.0/eOdpad.Utils.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/bin/Debug/netstandard2.0/eOdpad.Utils.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/obj/Debug/netstandard2.0/eOdpad.Utils.csproj.CoreCompileInputs.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/obj/Debug/netstandard2.0/eOdpad.Utils.AssemblyInfoInputs.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/obj/Debug/netstandard2.0/eOdpad.Utils.AssemblyInfo.cs
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/obj/Debug/netstandard2.0/eOdpad.Utils.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/obj/Debug/netstandard2.0/eOdpad.Utils.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.Utils/obj/Debug/netstandard2.0/eOdpad.Utils.csprojAssemblyReference.cache

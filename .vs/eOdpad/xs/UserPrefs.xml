@@ -1,12 +1,28 @@
 ﻿<Properties StartupConfiguration="{4B1F1222-95D8-4C54-A674-2A1982325A20}|Default">
-  <MonoDevelop.Ide.Workbench />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.ItemProperties.eOdpad.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D55E51FC-3BF2-4A47-8F4A-925036BF7053" />
+  <MonoDevelop.Ide.Workbench>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="0" Y="151" Width="1440" Height="784">
+        <Files>
+          <File FileName="eOdpad/ViewModels/MunicipalitySearchPageViewModel.cs" Line="164" Column="39" />
+          <File FileName="eOdpad/Pages/GarbageYardListPage.xaml.cs" Line="14" Column="35" />
+          <File FileName="eOdpad/Pages/MunicipalitySearchPage.xaml.cs" Line="22" Column="50" />
+          <File FileName="eOdpad/Controls/IncrementalListView.cs" Line="81" Column="14" />
+          <File FileName="eOdpad/ViewModels/OverviewPageViewModel.cs" Line="12" Column="26" />
+          <File FileName="eOdpad/ViewModels/StreetSearchPageViewModel.cs" Line="149" Column="54" />
+          <File FileName="eOdpad/Pages/Helpers/WasteTypeToColorConverter.cs" Line="24" Column="47" />
+          <File FileName="eOdpad/Pages/GarbageYardSearchPage.xaml.cs" Line="13" Column="35" />
+          <File FileName="eOdpad/Pages/GarbageYardSearchPage.xaml" Line="12" Column="27" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.eOdpad.UITests FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.eOdpad.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.eOdpad.Android PreferredExecutionTarget="Android.Android_Accelerated_x86" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
-  <MonoDevelop.Ide.ItemProperties.eOdpad.UITests FirstBuild="True" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.eOdpad.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.e7f7f47642b27e66798867c9a8ce2a129e4f8408" />
 </Properties>

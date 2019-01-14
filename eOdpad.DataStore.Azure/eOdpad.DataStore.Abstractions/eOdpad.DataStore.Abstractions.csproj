@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+      <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+      <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+      <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+      <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+      <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+      <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+      <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eOdpad.Client.DataObjects\eOdpad.Client.DataObjects.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -7,20 +7,28 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:WasteTypeToColorConverter x:Key="WasteTypeConverter" />
-            <local:WasteTypeToTextConverter x:Key="WasteTypeToTextConverter" />
+            <local:WasteTypeToImageConverter x:Key="WasteTypeToImageConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
             <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center"
                                IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
-            <Label Text="Dáta sa načítavajú..." HorizontalOptions="Center" VerticalOptions="Center"
+            <Label Text="Kalendár sa načítava..." HorizontalOptions="Center" VerticalOptions="Center"
                    IsVisible="False" IsEnabled="True" x:Name="syncLabel" />
-            <local:MyListView x:Name="wasteList" GroupDisplayBinding="{Binding Key}"
-                              IsPullToRefreshEnabled="true" IsGroupingEnabled="true" Refreshing="OnRefresh">
+            <local:MyListView x:Name="wasteList"
+                              ItemsSource="{Binding CalendarEventsGrouped}"
+                              GroupDisplayBinding="{Binding Key}"
+                              IsPullToRefreshEnabled="{Binding IsNotBusy}"
+                              IsGroupingEnabled="true"
+                              SeparatorVisibility = "None"
+                              SelectionMode = "None"
+                              RefreshCommand="{Binding ForceRefreshCommand}"
+                              IsRefreshing="{Binding IsBusy, Mode=OneWay}">
                 <ListView.Header>
-                    <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="#e6e6e6">
-                        <Label Text="Toto je personalizovaný Kalendár pre oblasť: Komenského, Smolenice" />
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="10" BackgroundColor="#e6e6e6">
+                        <Label Text="Toto je Váš personalizovaný kalendár. Ak potrebujete vyfiltrovať iba určitý typ odpadu môžete tak urobiť kliknutím na položku 'Zmeniť odpad' v menu." />
                     </StackLayout>
                 </ListView.Header>
                 <!-- Group Header Customization-->
@@ -30,7 +38,7 @@
                             <StackLayout Orientation="Horizontal" HeightRequest="25" 
                                          HorizontalOptions="FillAndExpand" Padding="10" BackgroundColor="#e6e6e6">
                                 <Label Text="{Binding Key, StringFormat='{0:dddd, dd.MM.yyyy}'}"
-                                       FontSize="Medium" VerticalTextAlignment="Center" />
+                                       FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
@@ -39,12 +47,55 @@
                 <local:MyListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="5" Orientation="Horizontal">
-                                <BoxView Color="{Binding WasteType, Converter={StaticResource WasteTypeConverter}}"
-                                         HorizontalOptions="StartAndExpand" HeightRequest="30" WidthRequest="30" />
-                                <Label Text="{Binding WasteType, Converter={StaticResource WasteTypeToTextConverter}}"
-                                       VerticalTextAlignment="Center" HorizontalOptions="End" />
-                            </StackLayout>
+                            <Grid Padding="5,0,5,0">
+                                <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="40"></ColumnDefinition>
+                                   <ColumnDefinition Width="*"></ColumnDefinition>
+                                   <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.RowSpan="3"
+                                       Source="{Binding WasteType, Converter={StaticResource WasteTypeToImageConverter}}"
+                                       Aspect="AspectFit" />
+   <!--                             <BoxView 
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Grid.RowSpan="3"
+                                        Color="{Binding WasteType, Converter={StaticResource WasteTypeConverter}}"
+                                        CornerRadius="30"
+                                        HeightRequest="30"
+                                        WidthRequest="30"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center" />-->
+
+                                <Label Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"
+                                       VerticalOptions="Center" VerticalTextAlignment="Center" 
+                                       Text="{Binding WasteType}" />  
+                                <Label Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"
+                                       Text="{Binding Municipality}" HorizontalTextAlignment="End"
+                                       HorizontalOptions="End" VerticalOptions="Center" />  
+                                <Label FontSize="Micro" Grid.Row="2" Grid.Column="2"
+                                       Text="{Binding CompanyName}" HorizontalTextAlignment="End"
+                                       HorizontalOptions="End" TextColor="Gray" />  
+                            </Grid>
+<!--                            <StackLayout Padding="5" Orientation="Horizontal">
+                                   <local:MyBoxView Color="{Binding WasteType, Converter={StaticResource WasteTypeConverter}}"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    VerticalOptions="Center"
+                                                    CornerRadius="30"
+                                                    HeightRequest="30" WidthRequest="30" />
+                                <StackLayout Orientation="Vertical" HorizontalOptions="End" Spacing="3">
+                                    <Label Text="{Binding WasteType}" VerticalTextAlignment="Start" />                                 
+                                    <Label Text="{Binding Municipality}" HorizontalTextAlignment="End"
+                                           FontSize="Micro" TextColor="Gray" VerticalTextAlignment="End" />
+                                </StackLayout>
+                            </StackLayout>-->
                         </ViewCell>
                     </DataTemplate>
                 </local:MyListView.ItemTemplate>

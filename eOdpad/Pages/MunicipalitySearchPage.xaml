@@ -3,33 +3,100 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              xmlns:local="clr-namespace:eOdpad;assembly=eOdpad"
+             xmlns:viewModels="clr-namespace:eOdpad.ViewModels;assembly=eOdpad"
+             xmlns:cells="clr-namespace:eOdpad.Controls.Cells;assembly=eOdpad"
              x:Class="eOdpad.Pages.MunicipalitySearchPage"
              ios:Page.UseSafeArea="true"
              Title="Bydlisko">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center"
-                               IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
-            <Label Text="Dáta sa načítavajú..." HorizontalOptions="Center" VerticalOptions="Center"
-                   IsVisible="False" IsEnabled="True" x:Name="syncLabel" />
-            <SearchBar Placeholder="Hľadať" TextChanged="Handle_TextChanged" />
-            <Label x:Name="lblListEmpty" HorizontalOptions="CenterAndExpand"
-                   Text="Žiadne dáta k dispozícii" IsVisible="false" />
-            <local:MyListView x:Name="municipalityList" 
-                              IsPullToRefreshEnabled="true"
-                              ItemSelected="Municipality_Selected"
-                              Refreshing="OnRefresh">
-                   <ListView.Header>
+        <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+            <StackLayout>
+                <StackLayout.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="0,8,8,8"/>
+                            <On Platform="iOS" Value="0"/>
+                            <On Platform="UWP" Value="0"/>
+                        </OnPlatform>
+                    </StackLayout.Padding>
+                <StackLayout.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color" Android="{StaticResource Primary}"/>
+                </StackLayout.BackgroundColor>
+                <SearchBar Text="{Binding SearchText, Mode=TwoWay}" 
+                            Placeholder="Hľadať"
+                            SearchCommand="{Binding SearchCommand}"
+                            FontSize="Small" >
+                            <SearchBar.PlaceholderColor>
+                                <OnPlatform x:TypeArguments="Color" Android="White"/>
+                            </SearchBar.PlaceholderColor>
+                            <SearchBar.BackgroundColor>
+                                <OnPlatform x:TypeArguments="Color" Android="{StaticResource Primary}"/>
+                            </SearchBar.BackgroundColor>
+                            <SearchBar.TextColor>
+                                <OnPlatform x:TypeArguments="Color" Android="White"/>
+                            </SearchBar.TextColor>
+                            <SearchBar.CancelButtonColor>
+                                <OnPlatform x:TypeArguments="Color" Android="White" iOS="{StaticResource Primary}"/>
+                            </SearchBar.CancelButtonColor>
+                </SearchBar>
+            </StackLayout>
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1">
+                   <local:IncrementalListView x:Name="municipalityList" 
+                              ItemsSource="{Binding Municipalities}"
+                              PreloadCount = "50"
+                              BackgroundColor="White"
+                              AbsoluteLayout.LayoutFlags="All" 
+                              AbsoluteLayout.LayoutBounds="0,0,1,1">
+                   <ListView.Behaviors>
+                        <local:EventToCommandBehavior 
+                                                  EventName="ItemSelected"
+                                                  Command="{Binding MunicipalitySelectedCommand}" />
+                   </ListView.Behaviors>
+                    <ListView.Header>
                         <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="#e6e6e6">
-                            <Label Text="Prosím vyberte si svoje mesto alebo obec:" />
+                            <Label Text="Prosím vyberte si svoje mesto alebo obec:" FontSize="Small" />
                         </StackLayout>
                     </ListView.Header>
-                    <local:MyListView.ItemTemplate>
+                    <local:IncrementalListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Name}" Detail="{Binding Code}" />
+                         <TextCell Text="{Binding Name}" Detail="{Binding DetailInfo}" />
                         </DataTemplate>
-                    </local:MyListView.ItemTemplate>
-            </local:MyListView>
-        </StackLayout>
+                    </local:IncrementalListView.ItemTemplate>
+                </local:IncrementalListView>
+                <StackLayout IsVisible="{Binding IsLoadingIncrementally}"
+                                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                                   AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
+                                    <StackLayout.Orientation>
+                                        <OnPlatform x:TypeArguments="StackOrientation" iOS="Horizontal"/>
+                                   </StackLayout.Orientation>
+                    <ActivityIndicator IsRunning="{Binding IsLoadingIncrementally}" >
+                        <ActivityIndicator.Color>
+                            <OnPlatform x:TypeArguments="Color" Android="{StaticResource Accent}"/>
+                        </ActivityIndicator.Color>
+                    </ActivityIndicator>
+                    <Label Text="Dáta sa načítavajú..." HorizontalOptions="Center" 
+                           Style="{DynamicResource EOdpadListItemTextStyleSize}"/>
+               </StackLayout>
+                <StackLayout IsVisible="{Binding NoMunicipalitiesFound}"
+                                           HorizontalOptions="FillAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           AbsoluteLayout.LayoutBounds="0,0,1,1"
+                            BackgroundColor="{DynamicResource WindowBackground}"
+                            Padding="16,0">
+                    <Label Text="Nie sú dostupné žiadne údaje." 
+                           HorizontalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalOptions="CenterAndExpand" FontSize="22" TextColor="#D3D2D2"/>
+               </StackLayout>
+            </AbsoluteLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

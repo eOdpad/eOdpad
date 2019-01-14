@@ -33,7 +33,11 @@
                     <TableSection Title="Správa a prílohy">
                         <ViewCell>
                             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                                <Editor Keyboard="Text" BackgroundColor="White" HeightRequest="150" MinimumHeightRequest="150" />
+                                <Editor Keyboard="Text"
+                                        BackgroundColor="White"
+                                        HeightRequest="100"
+                                        MinimumHeightRequest="100"
+                                        MaxLength = "600" />
    <!--                             <Grid Padding="20">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*" />

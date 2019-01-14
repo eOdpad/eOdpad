@@ -1,0 +1,14 @@
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/bin/Debug/netstandard2.0/eOdpad.DataStore.Mock.deps.json
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/bin/Debug/netstandard2.0/eOdpad.DataStore.Mock.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/bin/Debug/netstandard2.0/eOdpad.DataStore.Mock.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/bin/Debug/netstandard2.0/eOdpad.Client.DataObjects.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/bin/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/bin/Debug/netstandard2.0/eOdpad.Client.DataObjects.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/bin/Debug/netstandard2.0/eOdpad.DataStore.Abstractions.pdb
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/obj/Debug/netstandard2.0/eOdpad.DataStore.Mock.csprojAssemblyReference.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/obj/Debug/netstandard2.0/eOdpad.DataStore.Mock.csproj.CoreCompileInputs.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/obj/Debug/netstandard2.0/eOdpad.DataStore.Mock.AssemblyInfoInputs.cache
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/obj/Debug/netstandard2.0/eOdpad.DataStore.Mock.csproj.CopyComplete
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/obj/Debug/netstandard2.0/eOdpad.DataStore.Mock.dll
+/Users/michalhoblik/Documents/eOdpad/Solution/eOdpad/eOdpad.DataStore.Azure/eOdpad.DataStore.Mock/obj/Debug/netstandard2.0/eOdpad.DataStore.Mock.pdb

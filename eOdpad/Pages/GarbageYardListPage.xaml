@@ -5,18 +5,43 @@
              x:Class="eOdpad.Pages.GarbageYardListPage"
              Title="List" Icon="list_black.png">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <SearchBar Placeholder="Vyhľadať zberný dvor" /> 
-            <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center"
-                               IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
-            <local:MyListView x:Name="listView" VerticalOptions="FillAndExpand"
-                                   HorizontalOptions="FillAndExpand" IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
-                <local:MyListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Company}" Detail="{Binding Address}" />
-                    </DataTemplate>
-                </local:MyListView.ItemTemplate>
-            </local:MyListView>
-        </StackLayout>
+       <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <SearchBar Placeholder="Vyhľadať zberný dvor" /> 
+        <local:MyListView 
+            x:Name="ListViewGarbageYards"
+            ItemsSource="{Binding GarbageYards}"
+            IsPullToRefreshEnabled="{Binding IsNotBusy}"
+            RefreshCommand="{Binding ForceRefreshCommand}"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}" 
+            IsVisible="{Binding IsNotBusy}"
+            AbsoluteLayout.LayoutFlags="All" 
+            AbsoluteLayout.LayoutBounds="0,0,1,1">
+        <local:MyListView.SeparatorColor>
+            <OnPlatform x:TypeArguments="Color"
+                        Android="Transparent"/>
+        </local:MyListView.SeparatorColor>
+        <local:MyListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Company}"
+                              Detail="{Binding Address}" />
+                </DataTemplate>
+            </local:MyListView.ItemTemplate>
+        </local:MyListView>
+        <StackLayout IsVisible="{Binding IsBusy}"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"
+                     AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
+                     <StackLayout.Orientation>
+                       <OnPlatform x:TypeArguments="StackOrientation" iOS="Horizontal"/>
+                     </StackLayout.Orientation>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" >
+                <ActivityIndicator.Color>
+                    <OnPlatform x:TypeArguments="Color"
+                                Android="{StaticResource Accent}"/>
+                </ActivityIndicator.Color>
+            </ActivityIndicator>
+            <Label Text="Loading Garbage Yards..."
+                   HorizontalOptions="Center" />
+       </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

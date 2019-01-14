@@ -2,27 +2,45 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:viewModels="clr-namespace:eOdpad.ViewModels;assembly=eOdpad"
              xmlns:local="clr-namespace:eOdpad;assembly=eOdpad"
              ios:Page.UseSafeArea="true"
              x:Class="eOdpad.Pages.StreetSearchPage"
              Title="Ulica">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
          <StackLayout>
-            <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center"
-                               IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
-            <Label Text="Dáta sa načítavajú..." HorizontalOptions="Center" VerticalOptions="Center"
-                   IsVisible="False" IsEnabled="True" x:Name="syncLabel" />
-            <SearchBar Placeholder="Hľadať" TextChanged="Handle_TextChanged" />
-            <Label x:Name="lblListEmpty" HorizontalOptions="CenterAndExpand"
-                   Text="Žiadne dáta k dispozícii" IsVisible="false" />
-            <local:MyListView x:Name="streetList" 
-                              IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
-                    <local:MyListView.ItemTemplate>
+            <SearchBar x:Name="searchBar" Placeholder="Hľadať"
+                       SearchCommand="{Binding SearchCommand}"
+                       Text="{Binding SearchText}" />
+            <local:IncrementalListView x:Name="streetList" 
+                              ItemsSource="{Binding Streets}"
+                              PreloadCount = "50">
+                   <ListView.Behaviors>
+                        <local:EventToCommandBehavior 
+                                                  EventName="ItemSelected"
+                                                  Command="{Binding StreetSelectedCommand}" />
+                   </ListView.Behaviors>
+                   <ListView.Footer>
+                        <StackLayout Spacing="5">
+<!--                            <Label HorizontalOptions="CenterAndExpand" Text="Žiadne dáta k dispozícii" 
+                                   IsVisible="{Binding DataAvailable, Converter={StaticResource InverseBooleanConverter}}" />-->
+                            <ActivityIndicator Margin="20" IsRunning="{Binding IsLoadingIncrementally}"
+                                           IsVisible="{Binding IsLoadingIncrementally}"/>  
+                            <Label Text="Dáta sa načítavajú..." HorizontalOptions="Center" VerticalOptions="Center"
+                                           IsVisible="{Binding IsLoadingIncrementally}" IsEnabled="True" />
+                        </StackLayout>
+                    </ListView.Footer>
+                    <local:IncrementalListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Name}" Detail="{Binding MunicipalityCode}" />
+                            <TextCell Text="{Binding Road}" Detail="{Binding DetailInfo}" />
                         </DataTemplate>
-                    </local:MyListView.ItemTemplate>
-            </local:MyListView>
+                    </local:IncrementalListView.ItemTemplate>
+            </local:IncrementalListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

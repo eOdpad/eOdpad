@@ -83,7 +83,7 @@ namespace eOdpad
                 SectionName = MySettingsSectionName,
                 Title = "Zmeniť oblasť",
                 IconSource = "edit_location_white.png",
-                TargetType = typeof(MunicipalitySearchPage)
+                TargetType = typeof(MyPlacesPage)
             });
             MenuItems.Add(new MasterPageItem
             {
